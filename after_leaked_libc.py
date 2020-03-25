@@ -14,7 +14,8 @@ BINSH_OFFSET = list(libc.search(b'/bin/sh'))[0]
 PUTS = e.plt['puts']
 # PUTS_ADDR = 0xf765b140
 # PUTS_ADDR = 0xf75e0540
-PUTS_ADDR = 0xf7df2b40
+#LOCAL
+PUTS_ADDR = 0xf7df2b40 # 0xf7e47b40
 # PUTS_ADDR = 0xf7d83d90
 
 
