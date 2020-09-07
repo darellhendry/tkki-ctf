@@ -1,1 +1,1 @@
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+IceCTF{this_thing_is_just_sitting_here}
